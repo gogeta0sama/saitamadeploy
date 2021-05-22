@@ -2,7 +2,7 @@
 #By Eviral (github.com/TeamEviral ; t.me/Eviral)
 #Don't forget to give credit and make your source public.
 
-from SaitamaRobot import tbot, CMD_HELP
+from SaitamaRobot import CMD_HELP
 import os
 import subprocess
 
