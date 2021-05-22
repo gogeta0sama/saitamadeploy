@@ -3,12 +3,21 @@ import os
 import sys
 import time
 import spamwatch
+import urllib.parse as urlparse
+import json
+from logging import basicConfig
+from logging import DEBUG
+from logging import getLogger
+from logging import INFO
 
 import telegram.ext as tg
 from telethon import TelegramClient
+from telethon.sessions import StringSession
 
 StartTime = time.time()
-
+CMD_LIST = {}
+CMD_HELP = {}
+LOAD_PLUG = {}
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
