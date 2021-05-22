@@ -168,6 +168,18 @@ else:
     except:
         sw = None
         LOGGER.warning("Can't connect to SpamWatch!")
+        
+        if STRING_SESSION:
+        ubot = TelegramClient(StringSession(STRING_SESSION), API_KEY, API_HASH)
+    else:
+        sys.exit(1)
+    try:
+        ubot.start()
+    except BaseException:
+        print("Can't start ubot!")
+        sys.exit(1)
+else:
+    sys.exit(1)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 telethn = TelegramClient("saitama", API_ID, API_HASH)
