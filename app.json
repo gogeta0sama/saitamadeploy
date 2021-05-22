@@ -52,6 +52,16 @@
          "required": true,
          "value": "MyAwesomeSupportGroupGoesHere"
       },
+      "STRING_SESSION": {
+         "description": "Your Telethon String Session. Create it by repl.it.",
+         "required": true,
+         "value": ""
+      },
+      "MONGO_DB_URI": {
+         "description": "MongoDB Url get from mongodb",
+         "required": true,
+         "value": ""
+      },
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
